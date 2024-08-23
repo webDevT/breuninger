@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #333;
+            margin: 20px;
+            background: #C4C4C4;
+            line-height: 1.5;
+        }
+
+        body * {
+            box-sizing: border-box;
+        }
+
+        .page-row {
+            overflow: hidden; 
+        }
+        .page {
+            float: left;
+            width: 50%;
+        }
+        .page:first-child {
+            border-right: 1px dashed #333;
+            padding-right: 45px;
+        }
+        .page:nth-child(2) {
+            padding-left: 55px;
+        }
+        .container {
+            width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            background: #fff;
+            padding: 16px 50px;
+        }
+        .page-header {
+            overflow: hidden; 
+        }
+        .page-header__col {
+            float: left;
+            width: 50%;
+        }
+        .logo {
+            display: block;
+            width: 163px;
+            margin-bottom: 30px;
+        }
+        .logo-img {
+            width: 32px;
+        }
+        .logo-row span {
+            font-weight: 600;
+            vertical-align: middle;
+            display: inline-block;
+            padding-left: 5px;
+        }
+        .logo-row {
+            line-height: 1.5em;
+            margin-top: 10px;
+            margin-bottom: 36px;
+        }
+        .logo-img {
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .page-header__text {
+            font-size: 15px;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        .page-header__text-wrapper {
+            margin-bottom: 40px;
+        }
+        .medium {
+            font-weight: 600;
+        }
+        ul {
+            padding-left: 15px;
+        }
+        .return-info__img {
+            width: 65px;
+        }
+        .return-info {
+            margin-top: 50px;
+            overflow: hidden; 
+        }
+        .return-info__text-wrapper,
+        .return-info__img {
+            float: left;
+        }
+        .return-info__text-wrapper h2 {
+            margin-top: 0;
+        }
+        .return-info__text-wrapper {
+            padding-left: 15px;
+            margin-bottom: 60px;
+            width: 500px;
+        }
+        .margin-0 {
+            margin-top: 0;
+            margin-bottom: 0;
+
+        }
+        .page-footer {
+            font-size: 10px;
+            text-align: center;
+        }
+        .barcode__wrapper {
+            text-align: right;
+        }
+        .barcode {
+            width: 195px;
+            display: inline-block;
+        }
+        .return-table {
+            background-color: #EEEEEF;
+        }
+        .return-table tr td {
+            border-bottom: 2px solid #fff;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .return-table tr:last-child td {
+            border-bottom: none;
+        }
+        .return-table {
+            margin-bottom: 50px;
+        }
+        th {
+            text-align: left;
+        }
+        .table tr td {
+            border-bottom: 1px solid #E5E8E7;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .table tr th {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .table tr td:last-child {
+            background: #EEEEEF;
+        }
+        .table tr th:last-child {
+            background: #EEEEEF;
+        }
+        .table {
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="page-row">
+
+        <!-- start page 1   -->
+        <div class="page">
+
+            <!-- start page header -->
+            <div class="page-header">
+
+                <div class="page-header__col">
+                    <img src="img/Lieferschein_logo_breuninger.svg" alt="" class="logo">
+
+                    <p class="page-header__text">Frau</p>
+                    <p class="page-header__text">Maria Mustermann</p>
+                    <p class="page-header__text">Firma</p>
+                    <p class="page-header__text">Musterstraße 1-3</p>
+                    <p class="page-header__text">12345 Musterstadt</p>
+                    <p class="page-header__text">Deutschland</p>
+
+                </div>
+
+                <div class="page-header__col">
+                    <div class="logo-row">
+                        <img src="img/Lieferschein_logo_breuninger2.svg" alt="" class="logo-img">
+                        <span>Partnerartikel</span>
+                    </div>
+
+                    <div class="page-header__text-wrapper">
+                        <p class="page-header__text"><strong>Bitte bei allen Rückfragen angeben:</strong></p>
+                    <p class="page-header__text">Liefernummer: 12345678</p>
+                    <p class="page-header__text">Bestelldatum: 2.5.2017</p>
+                    </div>
+
+                    <p><strong>„Häufige Fragen“ beantworten wir
+unter www.breuninger.com/faq</strong>                      
+                    </p>
+
+                </div>
+
+            </div>
+            <!-- end page header -->
+
+            <!-- start page 1 content -->
+            <div class="page-content">
+                <h2>
+                    Ihr Liefer- und Rücksendeschein
+                </h2>
+
+                <p>
+                    Liebe Frau Mustermann,
+                </p>
+
+                <p>
+                    vielen Dank für Ihre Bestellung. Wir wünschen Ihnen damit viel Freude!
+                </p>
+
+                <p>
+                    Sollten Sie mit einem oder mehreren Artikeln nicht zufrieden sein, können Sie diese innerhalb von
+<span class="medium">30 Tagen ab Erhalt Ihres Paketes kostenfrei</span> zurücksenden:
+                </p>
+
+                <ul>
+                    <li>
+                        Tragen Sie die Nummer des Rücksendegrundes in das vorgesehene Feld ein und legen Sie diesen Schein dem Paket bei.
+                    </li>
+
+                    <li>
+                        Kleben Sie das beigelegte Rücksendeetikett auf das verschlossene Paket.
+                    </li>
+
+                    <li>
+                        Geben Sie das Paket in einer Filiale der Deutschen Post, einer DHL Packstation oder am Click & Collect Counter in einem unserer Häuser ab.
+                    </li>
+
+                    <li>
+                        Nach Bearbeitung Ihrer Rücksendung erhalten Sie eine E-Mail.
+                    </li>
+
+                </ul>
+
+                <p>
+                    Im Falle einer Reklamation bitten wir Sie die Schritte unter „Häufige Fragen“ auf
+www.breuninger.com zu befolgen.
+                </p>
+
+                <p>
+                    Wir bitten um Verständnis, dass wir Artikel leider nicht um- oder austauschen können.
+                </p>
+
+                <p>
+                    Herzlichst, <br>
+Ihr Breuninger Team
+                </p>
+
+            </div>
+            <!-- end page 1 content -->
+
+            <!-- start return info -->
+            <div class="return-info">
+                <img src="img/Lieferschein_logo_breuninger2.svg" alt="" class="return-info__img">
+
+                <div class="return-info__text-wrapper">
+                    <h2>
+                        Sie möchten Artikel zurücksenden?
+                    </h2>
+
+                    <p>
+                        Bitte senden Sie dieses Breuninger Partnerpaket direkt an die Adresse des Partners.
+Nutzen Sie dafür das beiliegende Rücksendeetikett.
+                    </p>
+
+                    <p class="margin-0">
+                        <strong>
+                            Max Mustermann
+                        </strong>
+                    </p>
+
+                    <p class="margin-0">
+                        <strong>
+                            Musterstraße 12
+                        </strong>
+                    </p>
+
+                    <p class="margin-0">
+                        <strong>
+                            12345 Musterstadt
+                        </strong>
+                    </p>
+
+                </div>
+
+            </div>
+            <!-- end return info -->
+
+            <!-- start page footer -->
+            <div class="page-footer">
+
+                <p>
+                    E. Breuninger GmbH & Co. • Marktstr. 1-3 • 70173 Stuttgart • kundenservice@breuninger.de
+                </p>
+
+                <p>
+                    OHG, Sitz Stuttgart, Handelsregister Stuttgart, HRA 9905, Alleinvertretungsberechtigte, persönlich haftende Gesellschafterin
+Breuninger Management GmbH. Sitz Stuttgart, Handelsreg. Stuttgart, HRB 742367, Geschäftsführer: Holger Blecker, Marcus Weller
+                </p>
+            </div>
+            <!-- end page footer -->
+            
+           
+        </div>
+        <!-- end page 1 -->
+
+        <!-- start page 2 -->
+        <div class="page">
+            <div class="barcode__wrapper">
+                <img src="img/barcode.png" alt="" class="barcode">
+            </div>
+
+            <h3>
+                Rücksendegrund
+            </h3>
+
+            <!-- start return table -->
+            <table style="width: 100%;" class="return-table">
+                <tr>
+                    <td>20 = zu groß / weit</td>
+                    <td>21 = zu klein / eng</td>
+                    <td>22 = zur Auswahl bestellt</td>
+                </tr>
+                <tr>
+                    <td>23 = gefällt mir nicht </td>
+                    <td>24 = Material / Qualität </td>
+                    <td>25 = nicht verträglich</td>
+                </tr>
+                <tr>
+                    <td>26 = anders als dargestellt</td>
+                    <td>27 = beschädigt / verschmutzt</td>
+                    <td>28 = Lieferung zu spät</td>
+                </tr>
+                <tr>
+                    <td>29 = falscher / unvollständiger Artikel </td>
+                    <td>30 = sonstiger Grund</td>
+                </tr>
+            </table>
+            <!-- end return table -->
+
+            <table class="table" style="width: 100%;">
+                <tr>
+                    <th>Pos.</th>
+                    <th>Artikelnummer </th>
+                    <th>Artikelbezeichnung</th>
+                    <th>Größe</th>
+                    <th>Grund</th>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>1000665065-13000</td>
+                    <td>SANDRO - Stricktop <br>
+                        puder</td>
+                    <td>36</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>1000687937-1800</td>
+                    <td>SANDRO – Trackpants <br>
+                        rot </td>
+                    <td>unisex</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>1000602792-13000</td>
+                    <td>RIMOWA - SALSA SPORT Mul- <br>
+                        tiwheel Trolley E-TAG matt- <br>
+                        schwarz</td>
+                    <td style="white-space:nowrap;">one size</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>1000156536123 </td>
+                    <td>STOP THE WATER WHILE USING <br>
+                        ME! - Körperöl ALMOND FIG</td>
+                    <td style="white-space:nowrap;">100.0 ml</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>1000632308</td>
+                    <td>Wiesnkönig – Lederhose TE- <br>
+                        GERNSEE
+                        braun</td>
+                    <td>50</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>1000589804-15000</td>
+                    <td>Steiff – Breuni-Bär <br>
+                        braun </td>
+                    <td style="white-space:nowrap;">one size</td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <p>
+                <strong>
+                    Ihre Rechnung haben Sie bereits per E-Mail erhalten.
+                </strong>
+            </p>
+            
+            
+        </div>
+        <!-- end page 2 -->
+
+    </div>
+    
+  </div>
+</body>
+</html>
